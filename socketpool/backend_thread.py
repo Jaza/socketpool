@@ -51,7 +51,7 @@ class ConnectionReaper(threading.Thread):
             self.pool.murder_connections()
 
     def ensure_started(self):
-        if not self.running and not self.isAlive():
+        if not self.running and not self.is_alive():
             self.start()
 
 
